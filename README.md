@@ -1,2 +1,2 @@
-# multi-team-calendar
-팀별 일정관리 앱
+# Multi Team Calendar
+일정 관리 웹앱 (React + Firebase)
