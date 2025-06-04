@@ -1,0 +1,1 @@
+// firebase.js 내용 (API 키 입력 필요)
