@@ -1,11 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { db } from './firebase';
 import { collection, getDocs, updateDoc, doc } from 'firebase/firestore';
-import { AuthContext } from './AuthContext';
 
 function RoleManager() {
   const [users, setUsers] = useState([]);
-  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     const loadUsers = async () => {
