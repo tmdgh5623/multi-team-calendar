@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <Calendar />
-      {role === "마스터" && <RoleManager />}
+      {(role === "마스터" || role === "관리자") && <RoleManager />}
     </div>
   );
 }
