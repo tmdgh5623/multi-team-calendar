@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from './firebase';
 import { doc, setDoc } from 'firebase/firestore';
 
-function Register() {
+function Register({ onBack }) {
   const [email, setEmail] = useState('');
   const [pw, setPw] = useState('');
 
@@ -14,6 +14,8 @@ function Register() {
         email,
         role: "일반"
       });
+      alert("회원가입 성공! 다시 로그인 해주세요.");
+      onBack();
     } catch {
       alert('회원가입 실패');
     }
@@ -25,6 +27,7 @@ function Register() {
       <input placeholder="이메일" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input placeholder="비밀번호" type="password" value={pw} onChange={(e) => setPw(e.target.value)} />
       <button onClick={handleRegister}>회원가입</button>
+      <button onClick={onBack}>뒤로가기</button>
     </div>
   );
 }

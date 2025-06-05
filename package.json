@@ -1,5 +1,5 @@
 {
-  "name": "calendar-role-manager",
+  "name": "calendar-firebase-auth",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

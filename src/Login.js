@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from './firebase';
 
-function Login() {
+function Login({ onRegister }) {
   const [email, setEmail] = useState('');
   const [pw, setPw] = useState('');
 
@@ -25,6 +25,8 @@ function Login() {
       <input placeholder="비밀번호" type="password" value={pw} onChange={(e) => setPw(e.target.value)} />
       <button onClick={handleLogin}>로그인</button>
       <button onClick={handleLogout}>로그아웃</button>
+      <br />
+      <button onClick={onRegister}>회원가입</button>
     </div>
   );
 }
