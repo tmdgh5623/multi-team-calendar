@@ -8,9 +8,7 @@ const TEAM_LIST = ["전체", "1팀", "2팀", "3팀", "4팀"];
 export default function SummaryList() {
   const [list, setList] = useState([]);
   const [selectedTeam, setSelectedTeam] = useState("전체");
-  const [form, setForm] = useState({
-    팀: "1팀", 대상처명: "", 거래처명: "", 연락처: "", 유형: ""
-  });
+  const [form, setForm] = useState({ 팀: "1팀", 대상처명: "", 거래처명: "", 연락처: "", 유형: "" });
 
   const loadData = async () => {
     let q = collection(db, "summary");
@@ -65,9 +63,7 @@ export default function SummaryList() {
 
       <table border="1" cellPadding="5">
         <thead>
-          <tr>
-            <th>팀</th><th>대상처명</th><th>거래처명</th><th>연락처</th><th>유형</th>
-          </tr>
+          <tr><th>팀</th><th>대상처명</th><th>거래처명</th><th>연락처</th><th>유형</th></tr>
         </thead>
         <tbody>
           {list.map(item => (
