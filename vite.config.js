@@ -1,13 +1,14 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  root: ".",                    // ✅ 추가
+  root: ".",
   build: {
-    outDir: "dist",             // ✅ 출력 폴더
+    outDir: "dist",
     rollupOptions: {
-      input: "index.html",      // ✅ 진입점 명시
-    },
-  },
+      input: "public/index.html"
+    }
+  }
 });
