@@ -1,1 +1,0 @@
-// SummaryTable.js - 총괄 리스트 화면
