@@ -1,11 +1,14 @@
-import React from 'react';
 
-const App = () => {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+
+export default function App() {
   return (
-    <div>
-      <h1>팀 일정관리 캘린더 (테스트 버전)</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </Router>
   );
-};
-
-export default App;
+}
